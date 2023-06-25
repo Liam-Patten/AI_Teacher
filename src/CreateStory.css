@@ -1,0 +1,32 @@
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }   
+}
+
+.createStory {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    row-gap: 30px;
+    padding: 20px;
+    border-radius: 0 0 20px 20px;
+    animation: floating 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@media (prefers-color-scheme: light) {
+    .createStory {
+        background-color: azure;
+        box-shadow: 10px 10px gray;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .createStory {
+        background-color: #1d0000;
+        box-shadow: 10px 10px #6f6f6f;
+    }
+}
